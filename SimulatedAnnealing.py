@@ -1,5 +1,6 @@
 #  SA Implementation for TSP
 #  Author: Konrad Eilers
+#  ID: 3100542
 
 from random import randint
 from random import random
@@ -104,7 +105,7 @@ class SA:
                 dE = E_n - self.current_energy
 
                 # determine if we should accept the current neighbor
-                if random() < self.safe_exp(-dE / self.t): 
+                if random() < self.safe_exp(-max(0,dE) / self.t): 
                     self.current_energy = E_n
                     self.current_state = proposed_neighbor[:]
                     self.accept += 1
