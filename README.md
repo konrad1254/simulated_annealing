@@ -1,2 +1,2 @@
-# simulated_annealing
+# simulated Annealing
 Simulated Annealing Algorithm
