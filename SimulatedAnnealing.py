@@ -81,7 +81,7 @@ class SA:
             dist = 0
             for i in range(len(nodes)-1): 
                 dist += self.calc_euclidean(nodes[i+1], nodes[i])
-        
+            dist += self.calc_euclidean(nodes[0], nodes[-1])
             return dist
 
     def optimization(self):
@@ -182,6 +182,10 @@ def main():
                                             tau = 1000).run()
 
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize = (20,4))
+
+    data_points = data_points + [data_points[0]]
+    best_state = best_state + [best_state[0]]
+
     fig.suptitle('Traveling Salesman Problem')
     ax1.plot(*zip(*data_points))
     ax1.set_title('Initial Situation')
