@@ -1,6 +1,5 @@
 #  SA Implementation for TSP
 #  Author: Konrad Eilers
-#  ID: 3100542
 
 from random import randint
 from random import random
